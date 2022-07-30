@@ -1,0 +1,16 @@
+name: dispatch test
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: test tags
+        required: false
+        type: boolean
+jobs:
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Tags: $TAGS"
+        env:
+          TAGS: ${{ inputs.tags }}
