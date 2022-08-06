@@ -5,7 +5,7 @@ on:
       username:
         description: username
         type: string
-        default: ${{ github.ref }}
+        default: no name??
         required: true
 jobs:
   call:
