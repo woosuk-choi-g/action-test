@@ -4,8 +4,10 @@ on:
     inputs:
       username:
         description: username
-        type: string
         default: no name??
+        type: choice
+        options:
+          - just only one
         required: true
 jobs:
   call:
