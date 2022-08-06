@@ -1,0 +1,16 @@
+name: workflow run test
+on:
+  workflow_run:
+    workflows:
+      - dispatch test
+      - call test
+    types:
+      - requested
+      - completed
+jobs:
+  hello:
+    name: hello name
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo hello name

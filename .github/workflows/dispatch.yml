@@ -2,14 +2,11 @@ name: dispatch test
 on:
   workflow_dispatch:
     inputs:
-      tags:
-        description: test tags
-        required: false
-        type: boolean
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true 
+      username:
+        description: username
+        type: string
+        default: ${{ github.ref }}
+        required: true
 jobs:
   log-the-inputs:
     runs-on: ubuntu-latest

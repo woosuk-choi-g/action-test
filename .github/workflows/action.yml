@@ -1,3 +1,4 @@
+name: call test
 on:
   workflow_call:
     inputs:
