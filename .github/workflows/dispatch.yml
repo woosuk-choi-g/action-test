@@ -9,5 +9,9 @@ on:
         required: true
 jobs:
   call:
-    name: call name
-    uses: ./.github/workflows/action.yml
+    runs-on: ubuntu-latest
+    steps:
+      - name: call name
+        uses: ./.github/workflows/action.yml
+        with:
+          username: ${{ inputs.username }}
