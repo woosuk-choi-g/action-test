@@ -13,10 +13,6 @@ jobs:
   call:
     runs-on: ubuntu-latest
     steps:
-      - name: call name
-        uses: ./.github/workflows/action.yml
-        with:
-          username: ${{ inputs.username }}
       - name: print github
         env:
           GIBHUT_CONTEXT: ${{ toJSON(github) }}
