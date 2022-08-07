@@ -17,3 +17,7 @@ jobs:
         uses: ./.github/workflows/action.yml
         with:
           username: ${{ inputs.username }}
+      - name: print github
+        env:
+          GIBHUT_CONTEXT: ${{ toJSON(github) }}
+        run: echo $GIBHUT_CONTEXT
