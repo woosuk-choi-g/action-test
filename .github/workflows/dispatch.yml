@@ -17,3 +17,7 @@ jobs:
         env:
           GIBHUT_CONTEXT: ${{ toJSON(github) }}
         run: echo $GIBHUT_CONTEXT
+      - name: print event
+        env:
+          GIBHUT_EVENT: ${{ toJSON(github.event) }}
+        run: echo $GIBHUT_EVENT
