@@ -12,6 +12,8 @@ on:
         options:
           - just only one
         required: true
+env:
+  something: something
 jobs:
   print:
     runs-on: ubuntu-latest

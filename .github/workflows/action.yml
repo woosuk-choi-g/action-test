@@ -16,3 +16,4 @@ jobs:
       - name: Print the input name to STDOUT
         run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
       - run: echo ${{ github.run_number }}
+      - run: echo ${{ env.something }}
