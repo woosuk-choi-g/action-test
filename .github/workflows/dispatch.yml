@@ -13,7 +13,7 @@ on:
           - just only one
         required: true
 jobs:
-  call:
+  print:
     runs-on: ubuntu-latest
     steps:
       - name: print github
@@ -24,3 +24,5 @@ jobs:
         env:
           GIBHUT_EVENT: ${{ toJSON(github.event) }}
         run: echo $GIBHUT_EVENT
+  call:
+    uses: ./.github/workflows/action.yml
